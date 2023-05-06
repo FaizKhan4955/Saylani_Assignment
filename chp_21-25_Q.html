@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let firstName = prompt("Enter your first name:");
+let lastName = prompt("Enter your last name:");
+let fullName = firstName + " " + lastName;
+alert("Hello, " + fullName + "!");
+
+
+let phoneModel = prompt("What is your favorite mobile phone model?");
+let length = phoneModel.length;
+document.write("The length of your favorite mobile phone model (" + phoneModel + ") is " + length + ".");
+
+
+let word = "Pakistani";
+let index = word.indexOf("n");
+
+document.write("The index of 'n' in the word 'Pakistani' is: " + index);
+
+
+
+
+let word1 = "Hello World";
+let lastIndex = word1.lastIndexOf("l");
+document.write("The last index of 'l' in the word 'Hello World' is " + lastIndex + ".");
+
+
+
+
+let word2 = "Pakistani";
+let char = word2.charAt(3);
+document.write("The character at 3rd index in the word 'Pakistani' is " + char + ".");
+
+
+let firstName1 = prompt("Enter your first name:");
+let lastName1 = prompt("Enter your last name:");
+let fullName1 = firstName.concat(" ", lastName);
+alert("Hello " + fullName + "! Welcome to our website.");
+
+
+let city = "Hyderabad";
+let newCity = city.replace("Hyder", "Islam");
+document.write("Original City: " + city + "<br>");
+document.write("Replaced City: " + newCity);
+
+
+
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+
+var newMessage = message.replace(/and/g, "&");
+
+document.write("Original Message: " + message + "<br>");
+document.write("New Message: " + newMessage);
+
+
+
+
+
+var stringNum = "472";
+var number = parseInt(stringNum);
+document.write("String: " + stringNum + "<br>");
+document.write("Type of string: " + typeof stringNum + "<br>");
+document.write("Number: " + number + "<br>");
+document.write("Type of number: " + typeof number);
+
+
+
+let userInput1 = prompt("Enter some text:");
+let uppercaseText = userInput1.toUpperCase();
+document.write("Original text: " + userInput1 + "<br>");
+document.write("Uppercase text: " + uppercaseText);
+
+
+
+
+
+let userInput = prompt("Enter a string:"); 
+let words = userInput.split(" "); 
+let titleCase = "";
+
+for (let i = 0; i < words.length; i++) {
+  let word = words[i];
+  let capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  titleCase += capitalizedWord + " ";
+}
+
+document.write("Original string: " + userInput + "<br>");
+document.write("Title case string: " + titleCase.trim());
+
+
+var num = 35.36;
+var str = num.toString().replace(".", "");
+document.write("Number: " + num + "<br>");
+document.write("Result: " + str);
+
+
+
+
+let username = prompt("Enter username: ");
+
+let regex = /^[A-Za-z0-9]+$/
+
+if (!regex.test(username)) {
+  alert("Please enter a valid username without any special symbols [@ . , !]");
+} else {
+  alert("Username is valid!");
+}
+
+
+
+
+
+
+let A = ["cake", "apple pie", "cookie", "chips", "patties"];
+let searchItem = prompt("Enter the item you want to search:").toLowerCase(); // converting to lower case for case-insensitive search
+let found = false;
+
+for (let i = 0; i < A.length; i++) {
+  if (A[i].toLowerCase() === searchItem) { // converting to lower case for case-insensitive search
+    found = true;
+    break;
+  }
+}
+
+if (found) {
+  alert(searchItem + " is available in the list.");
+} else {
+  alert(searchItem + " is not available in the list.");
+}
+
+
+
+
+
+let password = prompt("Enter password: ");
+
+let regex1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
+if (!regex1.test(password) || /^[0-9]/.test(password)) {
+  alert("Please enter a valid password that contains alphabets and numbers, is at least 6 characters long, and does not start with a number.");
+} else {
+  alert("Password is valid!");
+}
+
+
+
+var university = "University of Karachi";
+var array = university.split(" ");
+for (var i = 0; i < array.length; i++) {
+  document.write(array[i] + "<br>");
+}
+
+
+
+let userInput12 = prompt("Enter a string:");
+let lastChar = userInput12.charAt(userInput12.length-1);
+alert("The last character of the input string is: " + lastChar);
+
+
+
+let str1 = "The quick brown fox jumps over the lazy dog";
+let count = 0;
+let words1 = str1.split(" ");
+
+for (let i = 0; i < words1.length; i++) {
+  if (words1[i].toLowerCase() === "the") {
+    count++;
+  }
+}
+
+document.write("The word 'the' appears " + count + " times in the given string.");
+
+</script>
+</body>
+</html>
